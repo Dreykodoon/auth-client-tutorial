@@ -11,6 +11,7 @@ import Welcome from './components/Welcome';
 import SignUp from './components/auth/SignUp';
 import Feature from './components/Feature';
 import SignOut from './components/auth/SignOut';
+import SignIn from './components/auth/SignIn';
 
 
 const INIT_STATE = {
@@ -30,6 +31,7 @@ ReactDOM.render(
                 <Route exact path="/signup" render={() => <SignUp/>}/>
                 <Route exact path="/feature" component={Feature}/>
                 <Route exact path="/signout" component={SignOut}/>
+                <Route exact path="/signin" component={SignIn}/>
             </App>
         </BrowserRouter>
     </Provider>,
