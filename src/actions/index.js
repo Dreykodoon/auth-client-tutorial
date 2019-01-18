@@ -26,3 +26,12 @@ export const signup = (formProps, callback) => {
         
     };
 };
+
+export const signout = () => {
+    localStorage.removeItem('token', '');
+
+    return {
+        type: AUTH_USER,
+        payload: ''
+    };
+};
