@@ -12,7 +12,14 @@ import SignUp from './components/auth/SignUp';
 import Feature from './components/Feature';
 
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const INIT_STATE = {
+    auth: {
+        authenticated: localStorage.getItem('token'),
+        errorMessage: ''
+    }
+};
+
+const store = createStore(reducers, INIT_STATE, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
     <Provider store={store}>

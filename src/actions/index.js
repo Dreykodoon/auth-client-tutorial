@@ -13,11 +13,11 @@ export const signup = (formProps, callback) => {
                 payload: response.data.token
             });
 
+            localStorage.setItem('token', response.data.token)
+
             callback();
         }
         catch (err) {
-            console.log(err);
-
             dispatch({
                 type: AUTH_ERROR,
                 payload: 'Email in use.'
