@@ -15,7 +15,7 @@ ReactDOM.render(
         <BrowserRouter>
             <App>
                 <Route exact path="/" component={Welcome}/>
-                <Route exact path="/signup" component={SignUp}/>
+                <Route exact path="/signup" render={() => <SignUp/>}/>
             </App>
         </BrowserRouter>
     </Provider>,
